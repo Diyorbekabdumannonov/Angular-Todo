@@ -55,12 +55,20 @@ export class AppComponent implements OnInit {
   showComplatedTodos() {
     this.localTodos = localStorage.getItem('todos')
     const parsedTodos = JSON.parse(this.localTodos)
-    const filteredTodo = parsedTodos.find((e: any) => e.category === 'all')
+    const filteredTodo = parsedTodos.filter((e: any) => e.category === 'all')
     this.todos = filteredTodo
   }
 
   showAllTodos() {
     this.localTodos = localStorage.getItem('todos')
     const parsedTodos = JSON.parse(this.localTodos)
+    this.todos = parsedTodos
+  }
+
+  showTodo() {
+    this.localTodos = localStorage.getItem('todos')
+    const parsedTodos = JSON.parse(this.localTodos)
+    const filteredTodo = parsedTodos.filter((e: any) => e.category === 'all')
+    this.todos = filteredTodo
   }
 }
