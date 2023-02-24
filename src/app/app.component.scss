@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin: auto;
+
+    input {
+        border-radius: 16px 0 0 16px;
+        padding: 12px;
+        outline: none;
+        font-size: 18px;
+        border: 1px solid #323232;
+        width: 100%;
+    }
+
+    button {
+        border-radius: 0 16px 16px 0;
+        padding: 13px;
+        background-color: blueviolet;
+        color: white;
+        font-weight: 700;
+        border: none;
+        font-size: 18px;
+    }
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    position: relative;
+    gap: 16px;
+    margin: 16px auto;
+
+    label {
+        cursor: pointer;
+        border: 1px solid #323232;
+        border-radius: 16px;
+        width: 468;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        font-size: 18px;
+
+        .delete {
+            border-radius: 100px;
+            color: red;
+            width: 20px;
+            height: 20px;
+            border: 1.5px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 500px;
+    justify-content: center;
+    margin: auto;
+    margin-top: 68px;
+    margin-bottom: 20px;
+
+    .nav-link {
+        border: none;
+        background-color: #fefefe;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        width: 80px;
+    }
+
+    .nav-link.active {
+        border-bottom: 2px solid blueviolet;
+    }
+}
